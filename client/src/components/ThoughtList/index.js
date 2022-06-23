@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const ThoughtList = ({ thoughts, title }) => {
     if (!thoughts.length) {
@@ -23,7 +23,7 @@ const ThoughtList = ({ thoughts, title }) => {
                           </Link>{' '}
                           thought on {thought.createdAt}
                         </p>
-                        <div className='card-body'>Li
+                        <div className='card-body'>
                             <Link to={`/thought/${thought._id}`}>
                                 <p>{thought.thoughtText}</p>
                                 <p className='mb-0'>
