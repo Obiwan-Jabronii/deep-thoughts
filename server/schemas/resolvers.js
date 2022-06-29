@@ -8,8 +8,8 @@ const resolvers = {
     Query: {
         // this will verify that the user has the JWT
         me: async (parent, args, context ) => {
-            if(context.user){
-                const userData = await User.findOne({})
+            if (context.user){
+                const userData = await User.findOne({_id: context.user._id })
                 .select('-__v -password')
                 .populate('thoughts')
                 .populate('friends');
